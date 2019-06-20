@@ -1,10 +1,10 @@
 <header (featureSelected)="onNavigate($event)"></header>
 <div class="container">
   <div class="row">
-    <recipes></recipes>
+    <recipes *ngIf="loadedFeature === 'recipe'"></recipes>
 
-    <shopping-list></shopping-list>
+    <shopping-list *ngIf="loadedFeature === 'shopping-list'"></shopping-list>
   </div>
 </div>
 
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
